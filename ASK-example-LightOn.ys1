@@ -1,0 +1,6 @@
+Freq: 433.92
+Mod: ASK
+Baud: 10000
+Repeat: 3
+Preamble: ff 
+Data: 8307cf9f60c1f20c183e7d83e60820c1f3e7d83006
