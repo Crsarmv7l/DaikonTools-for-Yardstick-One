@@ -35,7 +35,7 @@ I created this due to the lack of decent Yardstick One tools, which is a shame g
 
 Usage:
 
-Download the python script, change the location in def main() where your .ys1 files will be located home = os.path.expanduser( '~/Saved_TX/' ). Create a .ys1 file and run the script. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
+Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). Create a .ys1 file and run the script. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
 
 # License:
 
