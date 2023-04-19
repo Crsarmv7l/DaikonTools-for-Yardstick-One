@@ -22,6 +22,7 @@ Is easily readable and editable through any text editor. Parameters are entered 
 Features:
 
   - Easily editable
+  - Large library of signals takes up very little space
   - ASK/FSK modulations
   - Continuous transmission
   - File format is basically a text representation of the signal, so size is small
