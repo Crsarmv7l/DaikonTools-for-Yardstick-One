@@ -81,7 +81,7 @@ def ask(mod, home, path):
 	time.sleep(1)
 	sys.exit(130)
 
-def fsk(mod):
+def fsk(mod, home, path):
 	file = open(home + path)
 	content = file.readlines()
 	file.close()
