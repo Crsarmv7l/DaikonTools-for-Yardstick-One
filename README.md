@@ -21,6 +21,7 @@ Is easily readable and editable through any text editor. Parameters are entered 
   
 Features:
 
+  - Multiple saves are possible, provided the formats are followed and they will be parsed and filenames displayed when running the script
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
@@ -35,7 +36,7 @@ I created this due to the lack of decent Yardstick One tools, which is a shame g
 
 Usage:
 
-Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). Create a .ys1 file and run the script. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
+Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). Create a (or many) .ys1 file, run the script, type in the name of the .ys1 you want to send from the list. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
 
 # License:
 
