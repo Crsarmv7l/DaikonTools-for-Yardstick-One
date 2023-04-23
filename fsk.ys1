@@ -1,5 +1,5 @@
 Freq: 433.92
-Mod: ASK
+Mod: FSK
 Baud: 10000
 Deviation: 4500
 Repeat: 3
