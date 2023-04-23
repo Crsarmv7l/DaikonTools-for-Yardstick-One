@@ -93,6 +93,7 @@ def fsk(mod, home, path):
 	baud=int(baud)*1
 
 	dev=str(content[3]).replace('Deviation: ', '')
+	dev=dev.strip()
 	dev=int(dev)*1
 
 	repeat=str(content[4]).replace('Repeat: ', '')
