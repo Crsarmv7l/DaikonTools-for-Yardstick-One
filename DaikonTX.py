@@ -55,12 +55,12 @@ def ask(mod, home, path):
 	
 	if repeat == 0:
 		print("Continuous playback, hold Ctrl+C to stop, replug may be needed to reset YS1")
+		if pre == 0:
+			print("No Preamble")
+		else:
+			d.RFxmit(pre)
 		while True:
 			try:
-				if pre == 0:
-					print("No Preamble")
-				else:
-					d.RFxmit(pre)
 				d.RFxmit(data)
 			except KeyboardInterrupt:
 				print("Quitting...")
@@ -136,12 +136,12 @@ def fsk(mod, home, path):
 	#d.setAmpMode(ampmode=1)
 	if repeat == 0:
 		print("Continuous playback, hold Ctrl+C to stop, replug may be needed to reset YS1")
+		if pre == 0:
+			print("No Preamble")
+		else:
+			d.RFxmit(pre)
 		while True:
 			try:
-				if pre == 0:
-					print("No Preamble")
-				else:
-					d.RFxmit(pre)
 				d.RFxmit(data)
 			except KeyboardInterrupt:
 				print("Quitting...")
