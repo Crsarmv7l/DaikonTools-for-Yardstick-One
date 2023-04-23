@@ -77,7 +77,7 @@ def ask(mod, home, path):
 			d.RFxmit(data)
 			time.sleep(0)
 	d.setModeIDLE()
-	time.sleep(1)
+	time.sleep(0)
 	sys.exit(130)
 
 def fsk(mod, home, path):
@@ -157,7 +157,7 @@ def fsk(mod, home, path):
 			d.RFxmit(data)
 			time.sleep(0)
 	d.setModeIDLE()
-	time.sleep(1)
+	time.sleep(0)
 	sys.exit(130)
 def main():
 
