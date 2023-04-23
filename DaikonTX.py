@@ -75,7 +75,6 @@ def ask(mod, home, path):
 			d.RFxmit(pre)
 		for x in range (repeat):
 			d.RFxmit(data)
-			d.setModeIDLE()
 			time.sleep(0)
 	d.setModeIDLE()
 	time.sleep(1)
@@ -156,7 +155,6 @@ def fsk(mod, home, path):
 			d.RFxmit(pre)
 		for x in range (repeat):
 			d.RFxmit(data)
-			d.setModeIDLE()
 			time.sleep(0)
 	d.setModeIDLE()
 	time.sleep(1)
