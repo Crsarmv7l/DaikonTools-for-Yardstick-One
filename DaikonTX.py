@@ -39,46 +39,8 @@ def ask(mod, home, path):
 	else:
 		print("Data hex length is not divisible by 2, cannot convert to bytes")
 		sys.exit(130)
-
-#setup rfcat
-	d = RfCat()
-	d.setModeIDLE()
-	time.sleep(1)
-	d.setFreq(freq)
-	print('Set Freq: %s' % freq)
-	d.setMdmModulation(MOD_ASK_OOK)
-	print("Set Mod: ASK")
-	d.setMdmDRate(baud)
-	print('Set Baud: %s' % baud)
-	d.setMaxPower()
-	#d.setAmpMode(ampmode=1)
-	
-	if repeat == 0:
-		print("Continuous playback, hold Ctrl+C to stop, replug may be needed to reset YS1")
-		if pre == 0:
-			print("No Preamble")
-		else:
-			d.RFxmit(pre)
-		while True:
-			try:
-				d.RFxmit(data)
-			except KeyboardInterrupt:
-				print("Quitting...")
-				d.setModeIDLE()
-				time.sleep(0)
-				break
-	else:
-		print('Total Repeats:%s' % repeat)
-		if pre == 0:
-			print("No Preamble")
-		else:
-			d.RFxmit(pre)
-		for x in range (repeat):
-			d.RFxmit(data)
-			time.sleep(0)
-	d.setModeIDLE()
-	time.sleep(0)
-	sys.exit(130)
+		
+	tx(freq, mod, baud, repeat, pre, data)
 
 def fsk(mod, home, path):
 	file = open(home + path)
@@ -120,16 +82,21 @@ def fsk(mod, home, path):
 	else:
 		print("Data hex length is not divisible by 2, cannot convert to bytes")
 		sys.exit(130)
+	tx (freq, mod, baud, repeat, pre, data, dev)
 
+def tx(freq, mod, baud, repeat, pre, data, dev=0)
 	d = RfCat()
 	d.setModeIDLE()
 	time.sleep(1)
 	d.setFreq(freq)
 	print('Set Freq: %s' % freq)
-	d.setMdmModulation(MOD_2FSK)
-	print("Set Mod: FSK")
-	d.setMdmDeviatn(dev)
-	print('Set Deviation: %s' % dev)
+	if mod == "ASK":
+		d.setMdmModulation(Mod_ASK_OOK)
+	else:
+		d.setMdmModulation(MOD_2FSK)
+		print("Set Mod: FSK")
+		d.setMdmDeviatn(dev)
+		print('Set Deviation: %s' % dev)
 	d.setMdmDRate(baud)
 	print('Set Baud: %s' % baud)
 	d.setMaxPower()
@@ -160,6 +127,7 @@ def fsk(mod, home, path):
 	d.setModeIDLE()
 	time.sleep(0)
 	sys.exit(130)
+	
 def main():
 
 	home = os.path.expanduser( '~/Saved_TX/' )
