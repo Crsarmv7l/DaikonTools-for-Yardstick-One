@@ -38,6 +38,13 @@ Usage:
 
 Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). Create a (or many) .ys1 file, run the script, type in the name of the .ys1 you want to send from the list. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
 
+# In Progress:
+- Flipper RAW Format
+- RX that allows saving to my format
+- Expanding this to include the above
+
+Like all my stuff I work on it as I feel like it/have time. I don't put up partial code, only things that I know work. 
+
 # License:
 
 This software is provided without warranty or liability on the part of the author. It is free of charge and may be forked, modified, and utilized for all non-commercial and non-retail applications provided attribution is given, this license is included and source code is disclosed. Commercial use of this software is strictly prohibited. I welcome pull requests.
