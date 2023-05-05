@@ -41,6 +41,8 @@ Download the python script, change the location in def main() where your .ys1 fi
 # In Progress:
 - Flipper RAW Format
 - RX that allows saving to my format
+  - RX resending
+    - RX save after resending
 - Expanding this to include the above
 
 Like all my stuff I work on it as I feel like it/have time. I don't put up partial code, only things that I know work. 
