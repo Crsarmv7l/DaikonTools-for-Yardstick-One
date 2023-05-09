@@ -4,7 +4,7 @@ import time
 import sys
 
 def ask(mod, home, path):
-	file = open(home + path)
+	file = open(home + path + ".ys1")
 	content = file.readlines()
 	file.close()
 
@@ -43,7 +43,7 @@ def ask(mod, home, path):
 	tx(freq, mod, baud, repeat, pre, data)
 
 def fsk(mod, home, path):
-	file = open(home + path)
+	file = open(home + path + ".ys1")
 	content = file.readlines()
 	file.close()
 
@@ -92,6 +92,7 @@ def tx(freq, mod, baud, repeat, pre, data, dev=0)
 	print('Set Freq: %s' % freq)
 	if mod == "ASK":
 		d.setMdmModulation(Mod_ASK_OOK)
+		print("Set Mod: ASK")
 	else:
 		d.setMdmModulation(MOD_2FSK)
 		print("Set Mod: FSK")
@@ -139,11 +140,11 @@ def main():
 		if x.endswith(".ys1"):
 			print(x)
  
-	path = input("\nEnter full filename: \n")
+	path = input("\nEnter filename without extension: \n")
     
 	os.system('clear')
 
-	file = open(home + path)
+	file = open(home + path + ".ys1")
 	content = file.readlines()
 	file.close()
 
