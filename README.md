@@ -42,7 +42,7 @@ Download the python script, change the location in def main() where your .ys1 fi
 
 # In Progress:
 - Flipper RAW Format
-~~- RX that allows saving to my format
+- ~~RX that allows saving to my format~~
   - RX resending
     - RX save after resending
 - Expanding this to include the above
