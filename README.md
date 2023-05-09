@@ -2,11 +2,11 @@
 
 What is it?
 
-This is a tool for the Yardstick One Radio dongle to recieve/save/send RF signals via a .ys1 file. It allows users to easily recieve, save, send or create a saved signal by hand and transmit it without having to use the Rfcat interactive shell, or write their own python scripts.
+This are tools for the Yardstick One Radio dongle to receive/save/send RF signals via a .ys1 file. It allows users to easily receive, save, send or create a saved signal by hand and transmit it without having to use the Rfcat interactive shell, or write their own python scripts.
   
 The .ys1 file format:
 
-Is easily readable and editable through any text editor. Parameters are entered into the file, and saved. The DaikonTX script run, the file name typed in and the signal sent according to the parameters in the .ys1 file.
+RX saves signals in the correct format if desired. Hand editing is easy, analyze in URH, then create a .ys1 through any text editor.  The DaikonTX script run, the file name typed in and the signal sent according to the parameters in the .ys1 file.
   
   Required entries:
  - If you save a recieved signal via DaikonRX all of the below will be done for you, simply enter a filename.
@@ -27,7 +27,7 @@ Features:
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
-  - File format is basically a text representation of the signal, so size is small
+  - File format is a text representation of the signal, so size is small
   - Error checks hex data for length before converting to bytes
   - Rapid and easy method for sending signals, create or save a .ys1 and send it.
   - Amp setting is included in the python script but will need to be uncommented.
