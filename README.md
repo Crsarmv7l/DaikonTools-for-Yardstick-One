@@ -23,7 +23,6 @@ RX saves signals in the correct format if desired. Hand editing is easy, analyze
 Features:
 
   - Multiple saves are possible while RXing
-  - RX/TX tools for the format with flipper .subs support in progress
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
@@ -38,7 +37,7 @@ I created this due to the lack of decent Yardstick One tools, which is a shame g
 
 Usage:
 
-Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). This same line is also in DaikonRX and may need to be changed for you. Create/receive and save .ys1 files, then rn DaikonTX and Send.
+Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). This same line is also in DaikonRX and may need to be changed for you. Create/receive and save .ys1 files, then run DaikonTX and Send.
 
 # In Progress:
 - Flipper RAW Format
