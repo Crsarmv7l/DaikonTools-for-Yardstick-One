@@ -1,14 +1,15 @@
-# DaikonTX-for-Yardstick-One
+# DaikonTools-for-Yardstick-One
 
 What is it?
 
-This is a tool for the Yardstick One Radio dongle to send RF signals that have been saved as a .ys1 file according to the given format. It allows users to easily create a saved signal and transmit it without having to use the Rfcat interactive shell, or write their own python scripts.
+This is a tool for the Yardstick One Radio dongle to recieve/save/send RF signals via a .ys1 file. It allows users to easily recieve, save, send or create a saved signal by hand and transmit it without having to use the Rfcat interactive shell, or write their own python scripts.
   
 The .ys1 file format:
 
 Is easily readable and editable through any text editor. Parameters are entered into the file, and saved. The DaikonTX script run, the file name typed in and the signal sent according to the parameters in the .ys1 file.
   
   Required entries:
+ - If you save a recieved signal via DaikonRX all of the below will be done for you, simply enter a filename.
   
 - Entries must be in the order set forth in the ASK/FSK examples
 - Frequency must be entered to two decimals eg 315.00 or 433.92
@@ -21,13 +22,14 @@ Is easily readable and editable through any text editor. Parameters are entered 
   
 Features:
 
-  - Multiple saves are possible, provided the formats are followed and they will be parsed and filenames displayed when running the script
+  - Multiple saves are possible while RXing
+  - RX/TX tools for the format with flipper .subs support in progress
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
   - File format is basically a text representation of the signal, so size is small
   - Error checks hex data for length before converting to bytes
-  - Rapid and easy method for sending signals, create a .ys1 and send it.
+  - Rapid and easy method for sending signals, create or save a .ys1 and send it.
   - Amp setting is included in the python script but will need to be uncommented.
   
 Why?
@@ -36,11 +38,11 @@ I created this due to the lack of decent Yardstick One tools, which is a shame g
 
 Usage:
 
-Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). Create a (or many) .ys1 file, run the script, type in the name of the .ys1 you want to send from the list. Root access is not needed (and is detrimental) provided you don't need root access to access your Yardstick One.
+Download the python script, change the location in def main() where your .ys1 files will be located eg: home = os.path.expanduser( '~/Saved_TX/' ). This same line is also in DaikonRX and may need to be changed for you. Create/receive and save .ys1 files, then rn DaikonTX and Send.
 
 # In Progress:
 - Flipper RAW Format
-- RX that allows saving to my format
+~~- RX that allows saving to my format
   - RX resending
     - RX save after resending
 - Expanding this to include the above
