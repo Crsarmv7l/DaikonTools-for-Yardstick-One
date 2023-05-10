@@ -103,19 +103,16 @@ def tx(freq, mod, baud, repeat, pre, data, dev=0)
 	d.setMaxPower()
 	#d.setAmpMode(ampmode=1)
 	if repeat == 0:
-		print("Continuous playback, hold Ctrl+C to stop, replug may be needed to reset YS1")
+		print("Continuous playback, press ENTER to Stop")
 		if pre == 0:
 			print("No Preamble")
 		else:
 			d.RFxmit(pre)
-		while True:
+		while not keystop():
 			try:
 				d.RFxmit(data)
-			except KeyboardInterrupt:
-				print("Quitting...")
-				d.setModeIDLE()
-				time.sleep(0)
-				break
+			except ChipconUsbTimeoutException:
+				pass
 	else:
 		print('Total Repeats:%s' % repeat)
 		if pre == 0:
@@ -126,7 +123,7 @@ def tx(freq, mod, baud, repeat, pre, data, dev=0)
 			d.RFxmit(data)
 			time.sleep(0)
 	d.setModeIDLE()
-	time.sleep(0)
+	time.sleep(1)
 	sys.exit(130)
 	
 def main():
