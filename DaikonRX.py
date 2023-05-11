@@ -3,27 +3,31 @@ from time import sleep
 from sys import exit
 import os
 
-def write(freq, mod, baud, capture, dev=0):
+def write(d, freq, mod, baud, capture, dev=0):
 	home = os.path.expanduser('~/Saved_TX/')
-
-	yn = input("Write to file? y/N\n")
-	if yn.lower() == "y":
-		path = input("Enter the name of the save file\n")
-		f = open(home + path + ".ys1", "w")
-		freq = (freq/1000000)
-		f.write('Freq: %s\n' % freq)
-		f.write('Mod: %s\n' % mod)
-		f.write('Baud: %s\n' % baud)
-		if dev != 0:
-			f.write('Deviation: %s\n' % dev)
-		f.write('Repeat: 0\n')
-		f.write('Preamble: \n')
-		f.write('Data: %s\n' % capture)
-		f.close()
+	wr = input("Resend(x4)? y/N\n")
+	if wr.lower() == "y":
+		for x in range (4):
+			d.RFxmit(bytes.fromhex(capture))
+		print("Resent Signal four times")
+		yn = input("Write to file? y/N\n")
+		if yn.lower() == "y":
+			path = input("Enter the name of the save file\n")
+			f = open(home + path + ".ys1", "w")
+			freq = (freq/1000000)
+			f.write('Freq: %s\n' % freq)
+			f.write('Mod: %s\n' % mod)
+			f.write('Baud: %s\n' % baud)
+			if dev != 0:
+				f.write('Deviation: %s\n' % dev)
+			f.write('Repeat: 0\n')
+			f.write('Preamble: \n')
+			f.write('Data: %s\n' % capture)
+			f.close()
+		else:
+			print("Resuming...Press Enter to Stop")
 	else:
-		print("Resuming")
-		print("Press Enter to stop\n")
-
+		print("Resuming...Press Enter to Stop")
 def main():
 	
 	freq = input("Enter freq to two decimals: (eg. 433.92) \n")
@@ -77,9 +81,9 @@ def main():
 			capture = pkt.hex()
 			print('Received: %s\n' % capture)
 			if mod == "ASK":
-				write(freq, mod, baud, capture)
+				write(d, freq, mod, baud, capture)
 			elif mod == "FSK":
-				write(freq, mod, baud, capture, dev)
+				write(d, freq, mod, baud, capture, dev)
 		except ChipconUsbTimeoutException:
 			pass 	
 	d.setModeIDLE()
