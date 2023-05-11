@@ -23,6 +23,8 @@ RX saves signals in the correct format if desired. Hand editing is easy, analyze
 Features:
 
   - Multiple saves are possible while RXing
+  - Resend immediately upon capture
+  - Save after resending
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
@@ -42,8 +44,8 @@ Download the python script, change the location in def main() where your .ys1 fi
 # In Progress:
 - Flipper RAW Format
 - ~~RX that allows saving to my format~~
-  - RX resending
-    - RX save after resending
+  - ~~RX resending~~
+    - ~~RX save after resending~~
 - Expanding this to include the above
 
 Like all my stuff I work on it as I feel like it/have time. I don't put up partial code, only things that I know work. 
