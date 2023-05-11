@@ -8,9 +8,10 @@ The .ys1 file format:
 
 RX saves signals in the correct format if desired. Hand editing is easy, analyze in URH, then create a .ys1 through any text editor.  The DaikonTX script run, the file name typed in and the signal sent according to the parameters in the .ys1 file.
   
-  Required entries:
- - If you save a recieved signal via DaikonRX all of the below will be done for you, simply enter a filename.
-  
+
+- If you save a recieved signal via DaikonRX all of the below will be done for you, simply enter a filename.
+
+For Manual entries:
 - Entries must be in the order set forth in the ASK/FSK examples
 - Frequency must be entered to two decimals eg 315.00 or 433.92
 - Modulation must be either ASK or FSK
@@ -25,6 +26,9 @@ Features:
   - Multiple saves are possible while RXing
   - Resend immediately upon capture
   - Save after resending
+    - Does not exit after resending or resend/save. You can continue to rx and resend/save signals 
+    - Default is N, if you don't want to resend/save simply hit enter.
+    - Stopping rx must be done while waiting for a signal to be received (hit enter at that point)
   - Easily editable
   - ASK/FSK modulations
   - Continuous transmission
@@ -47,6 +51,7 @@ Download the python script, change the location in def main() where your .ys1 fi
   - ~~RX resending~~
     - ~~RX save after resending~~
 - Expanding this to include the above
+- Verified that resending does resend the signal but it needs more testing. I am unsure if the ptchanbw and channel spacing will negatively affect things
 
 Like all my stuff I work on it as I feel like it/have time. I don't put up partial code, only things that I know work. 
 
