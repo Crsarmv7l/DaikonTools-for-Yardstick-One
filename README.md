@@ -39,7 +39,7 @@ Features:
   
 Why?
 
-I created this due to the lack of decent Yardstick One tools, which is a shame given how awesome the device is. RFCrack is pretty decent but does not save things like freq which can make it a pain to send a saved signal, and doesn't set the dongle back to idle which is a necessity. I was also inspired by the Flipper Zero .sub file format which is very similar.
+I created this due to the lack of decent Yardstick One tools, which is a shame given how awesome the device is. RFCrack is pretty decent but does not save things like freq which can make it a pain to send a saved signal, doesn't set the dongle back to idle which is a necessity, and immediately exits after a save/resend (this doesn't). I was also inspired by the Flipper Zero .sub file format which is very similar.
 
 Usage:
 
