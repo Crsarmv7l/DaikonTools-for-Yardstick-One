@@ -44,7 +44,7 @@ def main():
 
 #setup rfcat
 	d = RfCat()
-	#Helps if using RX after TX
+	#Helps if using RX after DaikonTX
 	d.strobeModeReturn(MARC_STATE_RX)
 	d.setModeIDLE()
 	d.setModeRX()
@@ -81,7 +81,7 @@ def main():
 		try:
 			pkt, y = d.RFrecv()
 			capture = pkt.hex()
-			rssi =d.getRSSI()
+			rssi = d.getRSSI()
 			rssi = rssi.hex()
 			rssi = int(rssi, 16)
 			if rssi < 90:
