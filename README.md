@@ -51,7 +51,7 @@ Download the python script, change the location in def main() where your .ys1 fi
   - ~~RX resending~~
     - ~~RX save after resending~~
 - Expanding this to include the above
-- Verified that resending does resend the signal but it needs more testing. I am unsure if the ptchanbw and channel spacing will negatively affect things
+- ~~Verified that resending does resend the signal but it needs more testing. I am unsure if the ptchanbw and channel spacing will negatively affect things~~ Works very well after my rssi filtering, no issues after testing with 4 devices!
 
 Like all my stuff I work on it as I feel like it/have time. I don't put up partial code, only things that I know work. 
 
