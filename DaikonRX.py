@@ -9,7 +9,7 @@ def write(d, freq, mod, baud, capture, dev=0):
 	if wr.lower() == "y":
 		for x in range (4):
 			d.RFxmit(bytes.fromhex(capture))
-		print("Resent Signal four times")
+		print("Resent Signal four times\n")
 		yn = input("Write to file? y/N\n")
 		if yn.lower() == "y":
 			path = input("Enter the name of the save file\n")
@@ -44,6 +44,8 @@ def main():
 
 #setup rfcat
 	d = RfCat()
+	#Helps if using RX after TX
+	d.strobeModeReturn(MARC_STATE_RX)
 	d.setModeIDLE()
 	d.setModeRX()
 	d.setFreq(freq)
@@ -79,11 +81,16 @@ def main():
 		try:
 			pkt, y = d.RFrecv()
 			capture = pkt.hex()
-			print('Received: %s\n' % capture)
-			if mod == "ASK":
-				write(d, freq, mod, baud, capture)
-			elif mod == "FSK":
-				write(d, freq, mod, baud, capture, dev)
+			rssi =d.getRSSI()
+			rssi = rssi.hex()
+			rssi = int(rssi, 16)
+			if rssi < 90:
+				print('Received: %s\n' % capture)
+				print('RSSI: %s\n' % rssi)
+				if mod == "ASK":
+					write(d, freq, mod, baud, capture)
+				elif mod == "FSK":
+					write(d, freq, mod, baud, capture, dev)
 		except ChipconUsbTimeoutException:
 			pass 	
 	d.setModeIDLE()
