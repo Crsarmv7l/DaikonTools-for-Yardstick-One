@@ -37,8 +37,11 @@ def main():
 	mod = input("Number of modulation: 1. ASK/OOK / 2. FSK \n")
 	mod = int(mod)
 	
-	baud = input("Enter baud rate:")
-	baud = int(baud)
+	baud = input("Enter baud rate: (default 10000)")
+	if baud == '':
+		baud = 10000
+	else:
+		baud = int(baud)
 	
 	os.system('clear')
 
