@@ -124,6 +124,7 @@ def tx(freq, mod, baud, repeat, pre, data, dev=0)
 			time.sleep(0)
 	d.setModeIDLE()
 	time.sleep(1)
+	d = None
 	sys.exit(130)
 	
 def main():
