@@ -88,8 +88,8 @@ def main():
 			rssi = rssi.hex()
 			rssi = int(rssi, 16)
 			if rssi < 90:
-				print('Received: %s\n' % capture)
 				print('RSSI: %s\n' % rssi)
+				print('Received: %s\n' % capture)
 				if mod == "ASK":
 					write(d, freq, mod, baud, capture)
 				elif mod == "FSK":
