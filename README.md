@@ -2,7 +2,7 @@
 
 What is it?
 
-This are tools for the Yardstick One Radio dongle to receive/save/send RF signals via a .ys1 file. It allows users to easily receive, save, send or create a saved signal by hand and transmit it without having to use the Rfcat interactive shell, or write their own python scripts.
+This are tools for the Yardstick One Radio dongle to receive/save/send/resend RF signals via a .ys1 file. It allows users to easily receive, save, send or create a saved signal by hand and transmit it without having to use the Rfcat interactive shell, or write their own python scripts. Now supports ASK BinRaw Flipper .sub files.
   
 The .ys1 file format:
 
@@ -47,6 +47,8 @@ Download the python script, change the location in def main() where your .ys1 fi
 
 # In Progress:
 - Flipper RAW Format
+- ~~Flipper BinRaw files~~
+  - FSK BinRaw files  
 - ~~RX that allows saving to my format~~
   - ~~RX resending~~
     - ~~RX save after resending~~
