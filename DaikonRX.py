@@ -48,7 +48,7 @@ def main():
 #setup rfcat
 	d = RfCat()
 	#Helps if using RX after DaikonTX
-	d.strobeModeReturn(MARC_STATE_RX)
+	#d.strobeModeReturn(MARC_STATE_RX)
 	d.setModeIDLE()
 	d.setModeRX()
 	d.setFreq(freq)
@@ -98,6 +98,7 @@ def main():
 			pass 	
 	d.setModeIDLE()
 	time.sleep(1)
+	d = None
 
 if __name__ == '__main__':
     main()
