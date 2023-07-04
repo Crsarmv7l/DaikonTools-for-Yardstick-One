@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from rflib import *
 from time import sleep
 from sys import exit
