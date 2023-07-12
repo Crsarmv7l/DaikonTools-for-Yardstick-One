@@ -21,7 +21,7 @@ def write(d, freq, mod, baud, capture, dev=0):
 			f.write('Baud: %s\n' % baud)
 			if dev != 0:
 				f.write('Deviation: %s\n' % dev)
-			f.write('Repeat: 0\n')
+			f.write('Repeat: 4\n')
 			f.write('Preamble: \n')
 			f.write('Data: %s\n' % capture)
 			f.close()
