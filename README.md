@@ -23,6 +23,7 @@ For Manual entries:
   
 Features:
 
+  - Playlist: Send multiple saves in a row. Leave input blank to send, enter * to send all .ys1 in the folder
   - Multiple saves are possible while RXing
   - Resend immediately upon capture
   - Save after resending
