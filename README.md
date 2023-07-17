@@ -17,7 +17,7 @@ For Manual entries:
 - Modulation must be either ASK or FSK
 - Baud rate must be entered
 - Deviation must be entered for FSK 
-- If repeats are set to 0 replay will be continuous
+- If repeats are set to 0 replay will be continuous (playlist will only repeat a 0 signal 4 times, for obvious reasons)
 - Preamble is Optional
 - Data should be entered in hex
   
