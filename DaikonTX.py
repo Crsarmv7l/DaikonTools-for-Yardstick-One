@@ -92,7 +92,7 @@ def tx(freq, mod, baud, repeat, pre, data, dev=0)
 	d.setFreq(freq)
 	print('Set Freq: %s' % freq)
 	if mod == "ASK":
-		d.setMdmModulation(Mod_ASK_OOK)
+		d.setMdmModulation(MOD_ASK_OOK)
 		print("Set Mod: ASK")
 	else:
 		d.setMdmModulation(MOD_2FSK)
