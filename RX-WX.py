@@ -22,7 +22,7 @@ def lacrosse(st):
 		t3 = str(int(p[28:32], 2))
 		temp= str(int(t1+t2) - 50)+ "." + t3
 		print("\nLacrosse:")
-		print('Temp: %s F' % temp)
+		print('Temp: %s C' % temp)
 		print('Updated: %s' % curr)
 
 def infactory(cap):
