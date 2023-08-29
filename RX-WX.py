@@ -21,6 +21,7 @@ def lacrosse(st):
 		t2 = str(int(p[24:28], 2))
 		t3 = str(int(p[28:32], 2))
 		temp= str(int(t1+t2) - 50)+ "." + t3
+		temp = round((((int(temp)/10)*(9/5)) + 32), 1)
 		print("\nLacrosse:")
 		print('Temp: %s C' % temp)
 		print('Updated: %s' % curr)
@@ -130,8 +131,6 @@ def main():
 			pass 	
 	d.setModeIDLE()
 	d = None
-	return 0
-	time.sleep(1)
 
 if __name__ == '__main__':
     main()
