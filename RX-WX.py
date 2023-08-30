@@ -21,7 +21,7 @@ def lacrosse(st):
 		t2 = str(int(p[24:28], 2))
 		t3 = str(int(p[28:32], 2))
 		temp= str(int(t1+t2) - 50)+ "." + t3
-		temp = str(round(((int(temp)*(9/5)) + 32), 1))
+		temp = round((float(temp)*1.8 +32), 1)
 		print("\nLacrosse:")
 		print('Temp: %s C' % temp)
 		print('Updated: %s' % curr)
