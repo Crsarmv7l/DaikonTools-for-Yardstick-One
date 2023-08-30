@@ -5,9 +5,6 @@ import time
 from sys import exit
 import os
 
-t = time.localtime()
-curr=time.strftime("%H:%M", t)
-
 def lacrosse(st):
 	st = st.strip().split('0')
 	p=""
@@ -17,6 +14,8 @@ def lacrosse(st):
 		elif b == "1" or b == "11":
 			p+= "1"
 	if len(p) == 44:
+		t = time.localtime()
+		curr=time.strftime("%H:%M", t)
 		t1 = str(int(p[20:24], 2))
 		t2 = str(int(p[24:28], 2))
 		t3 = str(int(p[28:32], 2))
@@ -43,6 +42,8 @@ def infactory(cap):
 	for b in f:
 		if len(b) == 40 and flag == 0:
 			flag = flag + 1
+			t = time.localtime()
+			curr=time.strftime("%H:%M", t)
 			temp = round(((int(b[16:28], 2)/10) - 90), 1)
 			hum1 = str(int(b[28:32], 2))
 			hum2 = str(int(b[32:36], 2))
@@ -57,6 +58,8 @@ def decode(p):
 	y=p[28:]
 	temp = round((((int(x, 2))/10)*(9/5) +32), 1)
 	hum = int(y, 2)
+	t = time.localtime()
+	curr=time.strftime("%H:%M", t)
 	print("\nNexus:")
 	print('Temp: %s F' % temp)
 	print('Humidity: %s' % hum)
