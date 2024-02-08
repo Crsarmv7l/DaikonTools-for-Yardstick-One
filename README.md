@@ -1,3 +1,6 @@
+Version 2 with rolling code implementations soon to be published, because @cclab's RFcrack is a steaming pile.
+It's ironic, because if he ever updates his yardstick one he will be running my code 🤣 🤣
+
 # DaikonTools-for-Yardstick-One
 
 What is it?
